@@ -18,7 +18,8 @@ async function read(query) {
     return result.hits.hits
   }
 
-exports.search = (req, res) => {
+exports.search = async (req, res) => {
     const query = req.body.search
-    read(query).catch(console.log)
+    const data = await read(query).catch(console.log)
+    res.json({results: data})
 }
