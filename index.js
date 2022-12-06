@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 // my routes
 const searchRoutes = require("./routes/search")
+const feedbackRoutes = require("./routes/feedback")
 
 
 const client = new Client({
@@ -23,6 +24,7 @@ app.use(cors());
 
 //My Routes
 app.use("/api", searchRoutes);
+app.use("/api", feedbackRoutes);
 
 const port = 4000;
 app.listen(port, () => {
