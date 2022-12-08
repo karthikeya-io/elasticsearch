@@ -11,7 +11,18 @@ async function read(query) {
       query: {
         match: {
           symptoms: query
-        }
+        },
+        // more_like_this: {
+        //   fields: [ "symptoms" ],
+        //   like: [
+        //     {
+        //       _id: "-QTLYYQB4PmHVk2lZZKT"
+        //     }
+        //   ]
+        // }
+
+
+
       }
     })
     console.log(result.hits.hits)
