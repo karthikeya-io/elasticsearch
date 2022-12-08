@@ -21,7 +21,7 @@ const client = new Client({
 function metrics(values) {
     // const labels = new Array()
     const array = new Array()
-    const labels = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]
+    // const labels = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]
     for(let i = 0;i<values.length;i++){
         if(values[i].value==="yes")
         array.push(1)
@@ -30,7 +30,7 @@ function metrics(values) {
         
     }
     let relaventRetrived = 0;
-    const totalRelavent = 10;
+    const totalRelavent = values.length;
     let precision = new Array();
     let recall = new Array();
 
