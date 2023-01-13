@@ -54,9 +54,7 @@ const readFiles1 = (dirname) => {
       }
     }, { ignore: [400] })
   
-  
     const operations = dataset.flatMap(doc => [{ index: { _index: 'disease-symptoms' } }, doc])
-  
     const bulkResponse = await client.bulk({ refresh: true, operations })
   
     if (bulkResponse.errors) {

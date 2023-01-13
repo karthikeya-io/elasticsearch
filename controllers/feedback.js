@@ -45,7 +45,7 @@ function metrics(values) {
     }
     console.log(precision)
     console.log(recall)
-    var f1 = (recall[array.length-1]*precision[array.length-1])/(precision[array.length-1]+recall[array.length-1]);
+    var f1 = 2*(recall[array.length-1]*precision[array.length-1])/(precision[array.length-1]+recall[array.length-1]);
     console.log(f1.toFixed(2))
     var f1 = f1.toFixed(2);
     return {precision,recall,f1}
